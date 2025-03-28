@@ -49,7 +49,7 @@ const colorExtractor = (source, visitedPath = "") => {
   Object.keys(source).forEach((key) => {
     let pathKey = paramCase(visitedPath);
     if (key !== "hex") {
-      pathKey += "-" + paramCase(key);
+      pathKey += paramCase(key);
     }
     const val = colorExtractor(source[key], pathKey);
     colorMap = colorMap.concat(val);

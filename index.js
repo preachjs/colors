@@ -1,47 +1,61 @@
 import { hexToHSL, hexToRGB } from "@barelyhuman/tocolor";
 
 export const colors = {
-  // base colors
-  base: "#F9F9FB",
-  surface: "#EDEEF2",
-  overlay: "#E1E3EA",
-  muted: "#8890AA",
-  subtle: "#555D77",
-  text: "#2A2E3C",
-  accent: "#D1E16A",
-  textOnAccent: "#254E34",
+	// base colors
+	background: "#1B1C1C",
+	subtle: "#222323",
+	element: "#2B2B2B",
+	border: "#4B4D4D",
+	muted: "#B2B4B4",
+	text: "#EDEEEE",
 
-  // variants
-  success: "#233805",
-  successLight: "#D8F5A2",
+	// accent
+	accent: "#C8C17F",
+	accentHover: "#BDB675",
+	accentBorder: "#59552F",
+	accentElement: "#2D2C22",
+	textOnAccent: "#25220A",
 
-  error: "#761919",
-  errorLight: "#FFC9C9",
+	// variants
+	success: "#B2C88A",
+	successHover: "#A8BD80",
+	successBorder: "#525D3D",
+	successElement: "#2A2D24",
+	textOnSuccess: "#1E250E",
 
-  warning: "#7A3F00",
-  warningLight: "#FFEC99",
+	error: "#EE908D",
+	errorHover: "#E28583",
+	errorBorder: "#804241",
+	errorElement: "#3C1F1E",
+	textOnError: "#102334",
 
-  info: "#213078",
-  infoLight: "#BAC8FF",
+	warning: "#D18D56",
+	warningHover: "#C4824A",
+	warningBorder: "#6C4D34",
+	warningElement: "#332921",
+	textOnWarning: "#FFFFFF",
 
-  neutral: "#505963",
-  neutralLight: "#E9ECEF",
+	info: "#8FC4F3",
+	infoHover: "#85B9E8",
+	infoBorder: "#33658F",
+	infoElement: "#172F43",
+	textOnInfo: "#102334",
 };
 
 /**
  * @type {Record<keyof typeof colors, import("@barelyhuman/tocolor").HSL>}
  */
 export const colorsHSL = Object.fromEntries(
-  Object.entries(colors).map(([k, v]) => {
-    return [k, hexToHSL(v)];
-  })
+	Object.entries(colors).map(([k, v]) => {
+		return [k, hexToHSL(v)];
+	}),
 );
 
 /**
  * @type {Record<keyof typeof colors, import("@barelyhuman/tocolor").RGB>}
  */
 export const colorsRGB = Object.fromEntries(
-  Object.entries(colors).map(([k, v]) => {
-    return [k, hexToRGB(v)];
-  })
+	Object.entries(colors).map(([k, v]) => {
+		return [k, hexToRGB(v)];
+	}),
 );

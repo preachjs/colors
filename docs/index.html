@@ -7,7 +7,104 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>@preachjs/colors</title>
   <link rel="stylesheet" href="https://esm.sh/toastify-js@1.12.0/src/toastify.css">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="preach.css">
+  <style>
+    .preach-toast {
+      border-radius: 6px;
+      box-shadow: 0;
+      background: var(--preach-success-element);
+      color: var(--preach-success-hover);
+    }
+
+    body {
+      background-color: var(--preach-background);
+      color: var(--preach-text);
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: left;
+      margin-bottom: 0px;
+    }
+
+    p {
+      color: var(--muted);
+      margin-top: 4px;
+    }
+
+    .palette-section {
+      margin-bottom: 30px;
+    }
+
+    .palette-section h2 {
+      margin-bottom: 20px;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header>nav>ul {
+      margin: 0px;
+      padding: 0px;
+    }
+
+    header>nav>ul>li {
+      list-style-type: none;
+      display: inline-block;
+      margin: 8px;
+    }
+
+    header>nav>ul>li>a {
+      display: inline-block;
+      text-decoration: none;
+      color: var(--preach-info);
+    }
+
+    header>nav>ul>li>a:hover {
+      color: var(--preach-info-hover);
+    }
+
+
+    button {
+      background: var(--preach-accent);
+      border: 0px;
+      color: var(--preach-text-on-accent);
+      line-height: 32px;
+      display: inline-block;
+      padding: 3px 12px;
+      border-radius: 6px;
+    }
+
+    button:hover {
+      cursor: pointer;
+      background: var(--preach-accent-hover);
+    }
+
+    button:active {
+      box-shadow: unset;
+    }
+
+    .color-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      gap: 20px;
+    }
+
+    .color-box {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      height: 72px;
+      border-radius: 8px;
+      text-align: center;
+      border: 2px solid var(--preach-border);
+    }
+  </style>
 </head>
 
 <body>
@@ -41,36 +138,109 @@
       </button>
     </div>
     <br>
-    <div id="palette">
-      <!-- <div class="card" data-color="#fafafa/zinc-50" style="background:var(--zinc-50)">
-      </div>
-      <div class="card" data-color="#f4f4f5/zinc-100" style="background:var(--zinc-100)">
+    <h1>Palette Preview</h1>
 
+    <!-- Base Colors -->
+    <div class="palette-section">
+      <h2>Base Colors</h2>
+      <div class="color-grid">
+        <div class="color-box" style="background-color: var(--preach-background); color: var(--preach-text);">Background
+        </div>
+        <div class="color-box" style="background-color: var(--preach-subtle); color: var(--preach-text);">Subtle</div>
+        <div class="color-box" style="background-color: var(--preach-element); color: var(--preach-text);">Element</div>
+        <div class="color-box" style="background-color: var(--preach-border); color: var(--preach-text);">Border</div>
+        <div class="color-box" style="background-color: var(--preach-muted); color: var(--preach-background);">Muted
+        </div>
+        <div class="color-box" style="background-color: var(--preach-text); color: var(--preach-background);">Text</div>
       </div>
-      <div class="card" data-color="#e4e4e7/zinc-200" style="background:var(--zinc-200)">
+    </div>
 
+    <!-- Accent Colors -->
+    <div class="palette-section">
+      <h2>Accent Colors</h2>
+      <div class="color-grid">
+        <div class="color-box" style="background-color: var(--preach-accent); color: var(--preach-text-on-accent);">
+          Accent</div>
+        <div class="color-box"
+          style="background-color: var(--preach-accent-hover); color: var(--preach-text-on-accent);">Accent Hover
+        </div>
+        <div class="color-box" style="background-color: var(--preach-accent-border); color: var(--preach-text);">Accent
+          Border
+        </div>
+        <div class="color-box" style="background-color: var(--preach-accent-element); color: var(--preach-text);">Accent
+          Element</div>
       </div>
-      <div class="card" data-color="#d4d4d8/zinc-300" style="background:var(--zinc-300)">
+    </div>
 
+    <!-- Success Colors -->
+    <div class="palette-section">
+      <h2>Success Colors</h2>
+      <div class="color-grid">
+        <div class="color-box" style="background-color: var(--preach-success); color: var(--preach-text-on-success);">
+          Success</div>
+        <div class="color-box"
+          style="background-color: var(--preach-success-hover); color: var(--preach-text-on-success);">Success Hover
+        </div>
+        <div class="color-box" style="background-color: var(--preach-success-border); color: var(--preach-text);">
+          Success
+          Border</div>
+        <div class="color-box" style="background-color: var(--preach-success-element); color: var(--preach-text);">
+          Success
+          Element
+        </div>
       </div>
-      <div class="card" data-color="#a1a1aa/zinc-400" style="background:var(--zinc-400)">
+    </div>
 
+    <!-- Error Colors -->
+    <div class="palette-section">
+      <h2>Error Colors</h2>
+      <div class="color-grid">
+        <div class="color-box" style="background-color: var(--preach-error); color: var(--preach-text-on-error);">
+          Error</div>
+        <div class="color-box" style="background-color: var(--preach-error-hover); color: var(--preach-text-on-error);">
+          Error Hover
+        </div>
+        <div class="color-box" style="background-color: var(--preach-error-border); color: var(--preach-text);">Error
+          Border</div>
+        <div class="color-box" style="background-color: var(--preach-error-element);  color: var(--preach-text);">Error
+          Element
+        </div>
       </div>
-      <div class="card" data-color="#71717a/zinc-500" style="background:var(--zinc-500)">
+    </div>
 
+    <!-- Warning Colors -->
+    <div class="palette-section">
+      <h2>Warning Colors</h2>
+      <div class="color-grid">
+        <div class="color-box" style="background-color: var(--preach-warning); color: var(--preach-text-on-warning);">
+          Warning</div>
+        <div class="color-box"
+          style="background-color: var(--preach-warning-hover); color: var(--preach-text-on-warning);">Warning Hover
+        </div>
+        <div class="color-box" style="background-color: var(--preach-warning-border); color: var(--preach-text);">
+          Warning
+          Border</div>
+        <div class="color-box" style="background-color: var(--preach-warning-element); color: var(--preach-text);">
+          Warning
+          Element
+        </div>
       </div>
-      <div class="card" data-color="#52525b/zinc-600" style="background:var(--zinc-600)">
+    </div>
 
+    <!-- Info Colors -->
+    <div class="palette-section">
+      <h2>Info Colors</h2>
+      <div class="color-grid">
+        <div class="color-box" style="background-color: var(--preach-info); color: var(--preach-text-on-info);">
+          Info</div>
+        <div class="color-box" style="background-color: var(--preach-info-hover); color: var(--preach-text-on-info);">
+          Info Hover</div>
+        <div class="color-box" style="background-color: var(--preach-info-border); color: var(--preach-text);">Info
+          Border</div>
+        <div class="color-box" style="background-color: var(--preach-info-element); color: var(--preach-text);">Info
+          Element
+        </div>
       </div>
-      <div class="card" data-color="#3f3f46/zinc-700" style="background:var(--zinc-700)">
-
-      </div>
-      <div class="card" data-color="#27272a/zinc-800" style="background:var(--zinc-800)">
-
-      </div>
-      <div class="card" data-color="#18181b/zinc-900" style="background:var(--zinc-900)">
-
-      </div> -->
     </div>
   </section>
   <script type="importmap">
