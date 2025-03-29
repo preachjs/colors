@@ -5,7 +5,7 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
-    "dev:docs": "",
+    "dev:docs": "serve docs",
     "build": "node generate.js",
     "prepublishOnly": "npm run build",
     "size": "sizesnap",
