@@ -2,7 +2,7 @@
 
 .preach-toast {
   border-radius: 6px;
-  box-shadow: 0;
+  box-shadow: unset !important;
   background: var(--preach-success-element);
   color: var(--preach-success-hover);
 }
