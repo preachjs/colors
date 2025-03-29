@@ -1,0 +1,102 @@
+@import url("./preach.css");
+
+.preach-toast {
+  border-radius: 6px;
+  box-shadow: 0;
+  background: var(--preach-success-element);
+  color: var(--preach-success-hover);
+}
+
+body {
+  background-color: var(--preach-background);
+  color: var(--preach-text);
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+h1 {
+  text-align: left;
+  margin-bottom: 0px;
+}
+
+p {
+  color: var(--muted);
+  margin-top: 4px;
+}
+
+.palette-section {
+  margin-bottom: 30px;
+}
+
+.palette-section h2 {
+  margin-bottom: 20px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header > nav > ul {
+  margin: 0px;
+  padding: 0px;
+}
+
+header > nav > ul > li {
+  list-style-type: none;
+  display: inline-block;
+  margin: 8px;
+}
+
+header > nav > ul > li > a {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--preach-info);
+}
+
+header > nav > ul > li > a:hover {
+  color: var(--preach-info-hover);
+}
+
+button {
+  background: var(--preach-accent);
+  border: 0px;
+  color: var(--preach-text-on-accent);
+  line-height: 32px;
+  display: inline-block;
+  padding: 3px 12px;
+  border-radius: 6px;
+}
+
+button:hover {
+  cursor: pointer;
+  background: var(--preach-accent-hover);
+}
+
+button:active {
+  box-shadow: unset;
+}
+
+.color-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 20px;
+}
+
+.color-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  height: 72px;
+  border-radius: 8px;
+  text-align: center;
+  border: 2px solid var(--preach-border);
+  transition: 250ms ease-in-out;
+}
+
+.color-box:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
