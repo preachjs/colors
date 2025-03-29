@@ -5,6 +5,7 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
+    "dev:docs": "",
     "build": "node generate.js",
     "prepublishOnly": "npm run build",
     "size": "sizesnap",
@@ -23,11 +24,12 @@
   "engines": {
     "node": ">=20"
   },
-  "devDependencies":{
+  "devDependencies": {
     "change-case": "^5.4.4",
     "csso": "^5.0.5",
     "path": "^0.12.7",
     "picocolors": "^1.1.1",
-    "prettier": "^3.5.3"
+    "prettier": "^3.5.3",
+    "serve": "^14.2.4"
   }
 }
