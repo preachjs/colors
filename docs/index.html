@@ -1,86 +1,353 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@preachjs/colors</title>
+    <link
+      rel="stylesheet"
+      href="https://esm.sh/toastify-js@1.12.0/src/toastify.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>@preachjs/colors</title>
-  <link rel="stylesheet" href="https://esm.sh/toastify-js@1.12.0/src/toastify.css">
-  <link rel="stylesheet" href="styles.css">
-</head>
-
-<body>
-  <section>
-    <header>
+  <body>
+    <section>
+      <header>
+        <div>
+          <h1>@preachjs/colors</h1>
+          <p>
+            <small> A simple pastel pallete </small>
+          </p>
+        </div>
+        <nav>
+          <ul>
+            <li>
+              <a href="https://github.com/preachjs/colors">Github</a>
+            </li>
+            <li>
+              <a href="https://npm.im/@preachjs/colors">NPM</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <br />
       <div>
-        <h1>
-          @preachjs/colors
-        </h1>
-        <p>
-          <small>
-            A simple pastel pallete
-          </small>
-        </p>
+        <button id="copy-css">Copy CSS</button>
       </div>
-      <nav>
-        <ul>
-          <li>
-            <a href="https://github.com/preachjs/colors">Github</a>
-          </li>
-          <li>
-            <a href="https://npm.im/@preachjs/colors">NPM</a>
-          </li>
-        </ul>
-      </nav>
-    </header>
-    <br>
-    <div>
-      <button id="copy-css">
-        Copy CSS
-      </button>
-    </div>
-    <br>
-    <div id="palette">
-      <!-- <div class="card" data-color="#fafafa/zinc-50" style="background:var(--zinc-50)">
-      </div>
-      <div class="card" data-color="#f4f4f5/zinc-100" style="background:var(--zinc-100)">
+      <br />
+      <h1>Palette Preview</h1>
 
+      <!-- Base Colors -->
+      <div class="palette-section">
+        <h2>Base Colors</h2>
+        <div class="color-grid">
+          <div
+            class="color-box"
+            data-color="--preach-background"
+            style="
+              background-color: var(--preach-background);
+              color: var(--preach-text);
+            "
+          >
+            Background
+          </div>
+          <div
+            class="color-box"
+            data-color="--preach-subtle"
+            style="
+              background-color: var(--preach-subtle);
+              color: var(--preach-text);
+            "
+          >
+            Subtle
+          </div>
+          <div
+            class="color-box"
+            data-color="--preach-element"
+            style="
+              background-color: var(--preach-element);
+              color: var(--preach-text);
+            "
+          >
+            Element
+          </div>
+          <div
+            class="color-box"
+            data-color="--preach-border"
+            style="
+              background-color: var(--preach-border);
+              color: var(--preach-text);
+            "
+          >
+            Border
+          </div>
+          <div
+            class="color-box"
+            data-color="--preach-muted"
+            style="
+              background-color: var(--preach-muted);
+              color: var(--preach-background);
+            "
+          >
+            Muted
+          </div>
+          <div
+            class="color-box"
+            data-color="--preach-text"
+            style="
+              background-color: var(--preach-text);
+              color: var(--preach-background);
+            "
+          >
+            Text
+          </div>
+        </div>
       </div>
-      <div class="card" data-color="#e4e4e7/zinc-200" style="background:var(--zinc-200)">
 
+      <!-- Accent Colors -->
+      <div class="palette-section">
+        <h2>Accent Colors</h2>
+        <div class="color-grid">
+          <div
+            class="color-box"
+            data-color="--preach-accent"
+            style="
+              background-color: var(--preach-accent);
+              color: var(--preach-text-on-accent);
+            "
+          >
+            Accent
+          </div>
+          <div
+            class="color-box"
+            data-color="--preach-accent-hover"
+            style="
+              background-color: var(--preach-accent-hover);
+              color: var(--preach-text-on-accent);
+            "
+          >
+            Accent Hover
+          </div>
+          <div
+            class="color-box"
+            data-color="--preach-accent-border"
+            style="
+              background-color: var(--preach-accent-border);
+              color: var(--preach-text);
+            "
+          >
+            Accent Border
+          </div>
+          <div
+            class="color-box"
+            data-color="--preach-accent-element"
+            style="
+              background-color: var(--preach-accent-element);
+              color: var(--preach-text);
+            "
+          >
+            Accent Element
+          </div>
+        </div>
       </div>
-      <div class="card" data-color="#d4d4d8/zinc-300" style="background:var(--zinc-300)">
 
+      <!-- Success Colors -->
+      <div class="palette-section">
+        <h2>Success Colors</h2>
+        <div class="color-grid">
+          <div
+            class="color-box"
+            data-color="--preach-success"
+            style="
+              background-color: var(--preach-success);
+              color: var(--preach-text-on-success);
+            "
+          >
+            Success
+          </div>
+          <div
+            class="color-box"
+            data-color="--preach-success-hover"
+            style="
+              background-color: var(--preach-success-hover);
+              color: var(--preach-text-on-success);
+            "
+          >
+            Success Hover
+          </div>
+          <div
+            class="color-box"
+            data-color="--preach-success-border"
+            style="
+              background-color: var(--preach-success-border);
+              color: var(--preach-text);
+            "
+          >
+            Success Border
+          </div>
+          <div
+            class="color-box"
+            data-color="--preach-success-element"
+            style="
+              background-color: var(--preach-success-element);
+              color: var(--preach-text);
+            "
+          >
+            Success Element
+          </div>
+        </div>
       </div>
-      <div class="card" data-color="#a1a1aa/zinc-400" style="background:var(--zinc-400)">
 
+      <!-- Error Colors -->
+      <div class="palette-section">
+        <h2>Error Colors</h2>
+        <div class="color-grid">
+          <div
+            class="color-box"
+            data-color="--preach-error"
+            style="
+              background-color: var(--preach-error);
+              color: var(--preach-text-on-error);
+            "
+          >
+            Error
+          </div>
+          <div
+            class="color-box"
+            data-color="--preach-error-hover"
+            style="
+              background-color: var(--preach-error-hover);
+              color: var(--preach-text-on-error);
+            "
+          >
+            Error Hover
+          </div>
+          <div
+            class="color-box"
+            data-color="--preach-error-border"
+            style="
+              background-color: var(--preach-error-border);
+              color: var(--preach-text);
+            "
+          >
+            Error Border
+          </div>
+          <div
+            class="color-box"
+            data-color="--preach-error-element"
+            style="
+              background-color: var(--preach-error-element);
+              color: var(--preach-text);
+            "
+          >
+            Error Element
+          </div>
+        </div>
       </div>
-      <div class="card" data-color="#71717a/zinc-500" style="background:var(--zinc-500)">
 
+      <!-- Warning Colors -->
+      <div class="palette-section">
+        <h2>Warning Colors</h2>
+        <div class="color-grid">
+          <div
+            class="color-box"
+            data-color="--preach-warning"
+            style="
+              background-color: var(--preach-warning);
+              color: var(--preach-text-on-warning);
+            "
+          >
+            Warning
+          </div>
+          <div
+            class="color-box"
+            data-color="--preach-warning-hover"
+            style="
+              background-color: var(--preach-warning-hover);
+              color: var(--preach-text-on-warning);
+            "
+          >
+            Warning Hover
+          </div>
+          <div
+            class="color-box"
+            data-color="--preach-warning-border"
+            style="
+              background-color: var(--preach-warning-border);
+              color: var(--preach-text);
+            "
+          >
+            Warning Border
+          </div>
+          <div
+            class="color-box"
+            data-color="--preach-warning-element"
+            style="
+              background-color: var(--preach-warning-element);
+              color: var(--preach-text);
+            "
+          >
+            Warning Element
+          </div>
+        </div>
       </div>
-      <div class="card" data-color="#52525b/zinc-600" style="background:var(--zinc-600)">
 
+      <!-- Info Colors -->
+      <div class="palette-section">
+        <h2>Info Colors</h2>
+        <div class="color-grid">
+          <div
+            class="color-box"
+            data-color="--preach-info"
+            style="
+              background-color: var(--preach-info);
+              color: var(--preach-text-on-info);
+            "
+          >
+            Info
+          </div>
+          <div
+            class="color-box"
+            data-color="--preach-info-hover"
+            style="
+              background-color: var(--preach-info-hover);
+              color: var(--preach-text-on-info);
+            "
+          >
+            Info Hover
+          </div>
+          <div
+            class="color-box"
+            data-color="--preach-info-border"
+            style="
+              background-color: var(--preach-info-border);
+              color: var(--preach-text);
+            "
+          >
+            Info Border
+          </div>
+          <div
+            class="color-box"
+            data-color="--preach-info-element"
+            style="
+              background-color: var(--preach-info-element);
+              color: var(--preach-text);
+            "
+          >
+            Info Element
+          </div>
+        </div>
       </div>
-      <div class="card" data-color="#3f3f46/zinc-700" style="background:var(--zinc-700)">
-
-      </div>
-      <div class="card" data-color="#27272a/zinc-800" style="background:var(--zinc-800)">
-
-      </div>
-      <div class="card" data-color="#18181b/zinc-900" style="background:var(--zinc-900)">
-
-      </div> -->
-    </div>
-  </section>
-  <script type="importmap">
-    {
-      "imports":{
-        "@barelyhuman/tocolor":"https://esm.sh/@barelyhuman/tocolor"
+    </section>
+    <script type="importmap">
+      {
+        "imports": {
+          "@barelyhuman/tocolor": "https://esm.sh/@barelyhuman/tocolor"
+        }
       }
-    }
-  </script>
-  <script type="module" src="main.js"></script>
-</body>
-
+    </script>
+    <script type="module" src="main.js"></script>
+  </body>
 </html>
