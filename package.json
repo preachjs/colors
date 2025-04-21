@@ -1,35 +1,33 @@
 {
-  "name": "@preachjs/colors",
-  "description": "JS/CSS color variables for the preach color palette",
-  "version": "0.0.0",
-  "type": "module",
-  "main": "index.js",
-  "scripts": {
-    "dev:docs": "serve docs",
-    "build": "node generate.js",
-    "prepublishOnly": "npm run build",
-    "size": "sizesnap",
-    "test": "echo 'done'"
-  },
-  "files": [
-    "css/",
-    "index.js"
-  ],
-  "keywords": [],
-  "author": "",
-  "license": "MIT",
-  "dependencies": {
-    "@barelyhuman/tocolor": "^0.2.5"
-  },
-  "engines": {
-    "node": ">=20"
-  },
-  "devDependencies": {
-    "change-case": "^5.4.4",
-    "csso": "^5.0.5",
-    "path": "^0.12.7",
-    "picocolors": "^1.1.1",
-    "prettier": "^3.5.3",
-    "serve": "^14.2.4"
-  }
+	"name": "@preachjs/colors",
+	"description": "JS/CSS color variables for the preach color palette",
+	"version": "0.0.0",
+	"type": "module",
+	"main": "index.js",
+	"scripts": {
+		"dev:docs": "serve docs",
+		"dev": "node --watch generate.js",
+		"build": "node generate.js",
+		"prepublishOnly": "npm run build",
+		"size": "sizesnap",
+		"test": "echo 'done'"
+	},
+	"files": ["css/", "index.js"],
+	"keywords": [],
+	"author": "",
+	"license": "MIT",
+	"dependencies": {
+		"@barelyhuman/tocolor": "^0.2.5"
+	},
+	"engines": {
+		"node": ">=20"
+	},
+	"devDependencies": {
+		"change-case": "^5.4.4",
+		"csso": "^5.0.5",
+		"path": "^0.12.7",
+		"picocolors": "^1.1.1",
+		"prettier": "^3.5.3",
+		"serve": "^14.2.4"
+	}
 }
